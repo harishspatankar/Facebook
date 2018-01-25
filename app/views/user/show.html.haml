@@ -1,0 +1,14 @@
+%table{:border => "1"}
+  %tr
+    %th Name
+    %th Email
+    %th Date of birth
+    %th Gender
+  - @users.each do |user|
+    %tr
+      %td= user.name
+      %td= user.email
+      %td= user.date_of_birth
+      %td= user.gender
+      %td= link_to 'Delete', user, method: :delete
+  = @time

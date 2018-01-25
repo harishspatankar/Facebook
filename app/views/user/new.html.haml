@@ -1,0 +1,35 @@
+= form_with scope: :user, url: user_index_url, local: true do |form|
+  %h1 Register
+  %table
+    %tr
+      %td
+        = form.label :Name
+      %td
+        = form.text_field :name
+    %tr
+      %td
+        = form.label :Email
+      %td
+        = form.text_field :email
+    %tr
+      %td
+        = form.label :Gender
+      %td
+        = form.text_field :gender
+    %tr
+      %td
+        = form.label :Date_of_birth
+      %td
+        = form.date_field :date_of_birth
+    %tr
+      %td
+        = form.label :Password
+      %td
+        = form.password_field :password
+    %tr
+      %td
+        = form.label :Confirm_Password
+      %td
+        = form.password_field :password_confirmation
+  = form.submit
+  = form.button :Reset

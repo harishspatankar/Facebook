@@ -16,9 +16,9 @@ class User < ApplicationRecord
   has_one :address
   has_many :posts
 
-  validates :name, presence: true
-  validates :gender, presence: true
-  validates :email, presence: true
+  validates :name, presence: { message: "name not found" }
+  validates :gender, presence: { message: "gender not found" }
+  validates :email, presence: true, uniqueness: true
   validates :password ,presence: true, confirmation: true
-  validates :date_of_birth, presence: true 
+  validates :date_of_birth, presence: true
 end
